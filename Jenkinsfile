@@ -15,11 +15,9 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
                 
-                # Initialize conda (adjust the path if your conda installation is elsewhere)
                 sudo /home/ruiqiy/miniconda3/bin/conda init
                 
-                # Run pytest using the specified conda environment (replace "myenv" with your actual environment name)
-                sudo /home/ruiqiy/bin/conda run -n mlip pytest
+                sudo /home/ruiqiy/miniconda3/bin/conda run -n mlip pytest
                 
                 # Once confirmed working, remove the exit command below
                 # exit 1
